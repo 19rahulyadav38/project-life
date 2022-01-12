@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useState,useRef} from "react";
 import logoImage from "../images/logo.png";
 import ladyImage from "../images/lady.png";
 import infoImg from "../images/info.png";
@@ -7,6 +7,22 @@ import "./LoginPage.css";
 import { Link } from "react-router-dom";
 
 function LoginPage() {
+  const [username,setUsername]=useState(null)
+  const[password,setPassword]=useState(null)
+  const uname=useRef(null)
+  const pword=useRef(null)
+  let urname;
+  let prword;
+  function fun(){
+      urname=uname.current.value
+      prword=pword.current.value
+      setUsername(urname)
+      setPassword(prword)
+    
+  }
+  function fun2(){
+    window.alert(username +" "+password )
+  }
   return (
     <div className="bgHome   w-full h-screen flex flex-col justify-center items-center">
       <div className=" py-2 lg:py-14">
@@ -27,33 +43,37 @@ function LoginPage() {
               </h1>
               <form>
                 <div className="lg:pt-10 pt-2">
-                  <label className="" for="email">
+                  <label className="" htmlFor="email">
                     <p className="font-bold">Email ID</p>
                   </label>
                   <input
                     className="w-full border rounded-md p-2 lg:mt-2 "
                     placeholder="Enter Email id"
-                    type="text"
-                    name=""
-                    value=""
+                    type="email"
+                    name="email"
+                    ref={uname}
+                    onChange={fun}
                   />
                 </div>
                 <div className="lg:pt-5">
-                  <label className="" for="email">
+                  <label className="" htmlFor="password">
                     <p className="font-bold">Password</p>
                   </label>
                   <input
                     className="w-full border rounded-md p-2 lg:mt-2"
                     placeholder="Password"
-                    type="text"
+                    type="password"
                     name=""
-                    value=""
+                    ref={pword}
+                    onChange={fun}
+                   
                   />
                 </div>
                 <p className="text-right">Forgot Password ?</p>
                 <Link to="dashboard"> <button
                   type=""
                   className="w-full loginButton  mt-2 py-2 rounded-md text-lg text-white"
+                  onClick={fun2}
                 >
                   Login
                 </button>

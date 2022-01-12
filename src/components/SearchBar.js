@@ -13,7 +13,7 @@ function SearchBar( props){
             placeholder="Search"
             type="text"
             name=""
-            value=""
+            
           />
         </span>
         <span className="inline-flex items-center  shadow-md  bg-white   rounded-full  mx-2 my-2 text-gray-400 px-3">

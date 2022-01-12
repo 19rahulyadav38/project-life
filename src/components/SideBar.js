@@ -5,7 +5,6 @@ import patientManagement from "../../src/Assets/images/svg/patientManagement.svg
 import patientAdd from "../../src/Assets/images/svg/patientAdd.svg";
 import round from "../../src/Assets/images/svg/round.svg";
 import reports from "../../src/Assets/images/svg/reports.svg";
-import dotGray from "../../src/Assets/images/svg/dotGray.svg";
 import bar from "../../src/Assets/images/svg/bar.svg";
 import questionMark from "../../src/Assets/images/svg/questionMark.svg"
 

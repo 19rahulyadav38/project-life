@@ -10,14 +10,14 @@ function DateTime() {
           placeholder="From"
           type="text"
           name=""
-          value=""
+         
         />
         <input
           className=" w-28 shadow-md px-3 py-1 rounded-2xl  mx-2 outline-none"
           placeholder="To"
           type="text"
           name=""
-          value=""
+          
         />{" "}
       </div>
     </div>
